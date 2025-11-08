@@ -3,27 +3,29 @@
   <desc id="desc">Corona estilizada con destellos morado y azul para temática esports.</desc>
   <defs>
     <linearGradient id="crownFill" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#8b3dff"/>
-      <stop offset="55%" stop-color="#5c61ff"/>
-      <stop offset="100%" stop-color="#16ff8f"/>
+      <stop offset="0%" stop-color="#8b3dff" />
+      <stop offset="55%" stop-color="#5c61ff" />
+      <stop offset="100%" stop-color="#16ff8f" />
     </linearGradient>
     <linearGradient id="crownStroke" x1="0%" x2="100%">
-      <stop offset="0%" stop-color="#4818a8"/>
-      <stop offset="100%" stop-color="#0affd8"/>
+      <stop offset="0%" stop-color="#4818a8" />
+      <stop offset="100%" stop-color="#0affd8" />
     </linearGradient>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
   </defs>
   <g filter="url(#glow)">
-    <path d="M10 72l8-40 24 24 22-38 22 38 24-24 8 40H10z" fill="url(#crownFill)" stroke="url(#crownStroke)" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M20 72h88l-6 12H26z" fill="rgba(12, 18, 28, 0.85)" stroke="#16ff8f" stroke-width="2" stroke-linejoin="round"/>
-    <circle cx="32" cy="34" r="6" fill="#16ff8f" opacity="0.7"/>
-    <circle cx="64" cy="24" r="8" fill="#5c61ff" opacity="0.8"/>
-    <circle cx="96" cy="34" r="6" fill="#8b3dff" opacity="0.7"/>
+    <path d="M10 72l8-40 24 24 22-38 22 38 24-24 8 40H10z" fill="url(#crownFill)"
+      stroke="url(#crownStroke)" stroke-width="4" stroke-linejoin="round" />
+    <path d="M20 72h88l-6 12H26z" fill="rgba(12, 18, 28, 0.85)" stroke="#16ff8f" stroke-width="2"
+      stroke-linejoin="round" />
+    <circle cx="32" cy="34" r="6" fill="#16ff8f" opacity="0.7" />
+    <circle cx="64" cy="24" r="8" fill="#5c61ff" opacity="0.8" />
+    <circle cx="96" cy="34" r="6" fill="#8b3dff" opacity="0.7" />
   </g>
 </svg>
