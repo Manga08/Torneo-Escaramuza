@@ -559,7 +559,7 @@ body {
     padding: clamp(2.4rem, 5vw, 3.4rem);
     border-radius: 26px;
     border: 1px solid rgba(22, 255, 143, 0.36);
-    background: rgba(7, 12, 14, 0.85);
+    background: rgba(7, 12, 14, 0.6);
     overflow: hidden;
     text-align: center;
     box-shadow: inset 0 0 52px rgba(22, 255, 143, 0.26);
@@ -578,8 +578,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: saturate(1.25) brightness(0.9) contrast(1.1);
-    transform: scale(1.08);
+    filter: saturate(1.1) brightness(1.1) contrast(1.05);
+    transform: scale(1.04);
     transform-origin: center;
     opacity: 0;
     transition: opacity 360ms var(--transition);
@@ -590,12 +590,13 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7, 12, 14, 0.65), rgba(7, 12, 14, 0.82));
+    background: radial-gradient(circle at 20% 15%, rgba(7, 12, 14, 0.2), rgba(7, 12, 14, 0.6)),
+                linear-gradient(180deg, rgba(7, 12, 14, 0.3), rgba(7, 12, 14, 0.72));
     z-index: 2;
 }
 
 .result-card[data-state="revealed"]::before {
-    opacity: 0.6;
+    opacity: 0.78;
 }
 
 .result-card.glitching {

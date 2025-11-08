@@ -161,7 +161,27 @@
 	};
 
 	const setColumnIdle = (column, label) => {
-		buildColumnStack(column, [label, label, label]);
+		// create enough items to fill the visible column area so there is no empty space
+		// measure a slot item height by creating a hidden sample element
+		let itemHeight = 60; // fallback
+		try {
+			const sample = document.createElement('span');
+			sample.className = 'slot__item';
+			sample.style.visibility = 'hidden';
+			sample.style.position = 'absolute';
+			sample.textContent = label || 'A';
+			document.body.appendChild(sample);
+			const rect = sample.getBoundingClientRect();
+			if (rect.height > 0) itemHeight = rect.height;
+			document.body.removeChild(sample);
+		} catch (e) {
+			// ignore measurement errors and use fallback
+		}
+
+		const columnHeight = column.getBoundingClientRect().height || 240;
+		const visibleCount = Math.max(6, Math.ceil(columnHeight / itemHeight) + 2);
+		const sequence = new Array(visibleCount).fill(label);
+		buildColumnStack(column, sequence);
 		column.dataset.state = 'idle';
 		column.removeAttribute('aria-hidden');
 		column.setAttribute('aria-label', `Mapa ${label}`);
