@@ -1,159 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0ef777">
-  <meta name="description" content="Landing de broadcast esports para sortear mapas de VALORANT modo Escaramuza / TDM.">
-  <meta property="og:title" content="El Rey de la Escaramuza – Edición #1">
-  <meta property="og:description"
-     content="Randomizador de mapas A, B y C con animaciones neon y estilo broadcast.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://manga08.github.io/Torneo-Escaramuza/">
-  <meta property="og:image" content="assets/crown.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="assets/crown.svg">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>El Rey de la Escaramuza – Edición #1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0ef777">
+    <meta name="description" content="Landing de broadcast esports para sortear mapas de VALORANT modo Escaramuza / TDM.">
+    <meta property="og:title" content="El Rey de la Escaramuza – Edición #1">
+    <meta property="og:description" content="Randomizador de mapas A, B y C con animaciones neon y estilo broadcast.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manga08.github.io/Torneo-Escaramuza/">
+    <meta property="og:image" content="assets/crown.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/crown.svg">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>El Rey de la Escaramuza – Edición #1</title>
 </head>
-
 <body class="theme-neon">
-  <div class="noise-overlay" aria-hidden="true"></div>
-  <div class="scanlines" aria-hidden="true"></div>
-  <div class="diagonal-streaks" aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="diagonal-streaks" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-  <main class="layout" role="main">
-    <header class="hero">
-      <div class="hero__badge" aria-hidden="true">
-        <img src="assets/crown.svg" alt="" class="hero__crown">
-        <span class="hero__edition">Edición #1</span>
-      </div>
-      <h1 class="hero__title">El Rey de la Escaramuza</h1>
-      <p class="hero__subtitle">Sortea Mapa A, B o C.</p>
-    </header>
-
-    <section class="controls" aria-label="Controles del sorteo">
-      <button id="randomize" class="btn btn-primary" type="button">Randomizar mapa</button>
-      <button id="reset" class="btn btn-secondary" type="button">Reiniciar</button>
-      <div class="control-switches">
-        <label class="switch">
-          <input id="sound-toggle" type="checkbox" checked>
-          <span class="slider"></span>
-          <span class="switch__label">Con sonido</span>
-        </label>
-        <label class="switch">
-          <input id="no-repeat-toggle" type="checkbox" checked>
-          <span class="slider"></span>
-          <span class="switch__label">Sin repetición</span>
-        </label>
-        <label class="switch">
-          <input id="streamer-toggle" type="checkbox">
-          <span class="slider"></span>
-          <span class="switch__label">Modo streamer</span>
-        </label>
-        <label class="switch">
-          <input id="theme-toggle" type="checkbox">
-          <span class="slider"></span>
-          <span class="switch__label">Tema azul/púrpura</span>
-        </label>
-      </div>
-    </section>
-
-      streamer</button>
-      <button id="streamer-exit" class="streamer-exit" type="button" aria-label="Salir de modo streamer" hidden>Salir de modo streamer</button>
-
-    <section class="slot" aria-live="polite" aria-label="Slot animado de mapas">
-      <div class="slot__window">
-        <div class="slot__column" data-column="0"></div>
-        <div class="slot__column" data-column="1"></div>
-        <div class="slot__column" data-column="2"></div>
-      </div>
-    </section>
-
-    <section class="result" aria-label="Mapa ganador">
-      <article class="result-card" data-state="idle">
-      <main class="layout" role="main">
+    <main class="layout" role="main">
         <section class="layout__column layout__column--brand" aria-label="Branding del evento">
-          <header class="hero">
-            <div class="hero__badge" aria-hidden="true">
-              <img src="assets/crown.svg" alt="" class="hero__crown">
-              <span class="hero__edition">Edición #1</span>
+            <header class="hero">
+                <div class="hero__badge" aria-hidden="true">
+                    <img src="assets/crown.svg" alt="" class="hero__crown">
+                    <span class="hero__edition">Edición #1</span>
+                </div>
+                <h1 class="hero__title">El Rey de la Escaramuza</h1>
+                <p class="hero__subtitle">Sortea Mapa A, B o C al instante con estilo de broadcast.</p>
+            </header>
+            <div class="hero__kick" aria-label="Transmisión en Kick">
+                <img src="assets/kick-seeklogo-Blanco.png" alt="Kick" class="hero__kick-logo" width="64" height="64">
+                <div class="hero__kick-copy">
+                    <span class="hero__kick-tag">SUTA119</span>
+                    <span class="hero__kick-desc">En vivo en Kick</span>
+                </div>
             </div>
-            <h1 class="hero__title">El Rey de la Escaramuza</h1>
-            <p class="hero__subtitle">Sortea Mapa A, B o C al instante con vibes de broadcast.</p>
-          </header>
-          <div class="hero__kick" aria-label="Transmisión en Kick">
-            <img src="assets/kick-seeklogo-Blanco.png" alt="Kick" class="hero__kick-logo" width="64" height="64">
-            <div class="hero__kick-copy">
-              <span class="hero__kick-tag">SUTA119</span>
-              <span class="hero__kick-desc">En vivo en Kick</span>
-            </div>
-          </div>
         </section>
 
         <section class="layout__column layout__column--stage" aria-label="Zona interactiva">
-          <button id="streamer-exit" class="streamer-exit" type="button" aria-label="Salir de modo streamer" hidden>Salir de modo streamer</button>
+            <button id="streamer-exit" class="streamer-exit" type="button" aria-label="Salir de modo streamer" hidden>Salir de modo streamer</button>
 
-          <section class="controls" aria-label="Controles del sorteo">
-            <button id="randomize" class="btn btn-primary" type="button">Randomizar mapa</button>
-            <button id="reset" class="btn btn-secondary" type="button">Reiniciar</button>
-            <div class="control-switches">
-              <label class="switch">
-                <input id="sound-toggle" type="checkbox" checked>
-                <span class="slider"></span>
-                <span class="switch__label">Con sonido</span>
-              </label>
-              <label class="switch">
-                <input id="no-repeat-toggle" type="checkbox" checked>
-                <span class="slider"></span>
-                <span class="switch__label">Sin repetición</span>
-              </label>
-              <label class="switch">
-                <input id="streamer-toggle" type="checkbox">
-                <span class="slider"></span>
-                <span class="switch__label">Modo streamer</span>
-              </label>
-              <label class="switch">
-                <input id="theme-toggle" type="checkbox">
-                <span class="slider"></span>
-                <span class="switch__label">Tema azul/púrpura</span>
-              </label>
-            </div>
-          </section>
+            <section class="controls" aria-label="Controles del sorteo">
+                <button id="randomize" class="btn btn-primary" type="button">Randomizar mapa</button>
+                <button id="reset" class="btn btn-secondary" type="button">Reiniciar</button>
+                <div class="control-switches">
+                    <label class="switch">
+                        <input id="sound-toggle" type="checkbox" checked>
+                        <span class="slider" aria-hidden="true"></span>
+                        <span class="switch__label">Con sonido</span>
+                    </label>
+                    <label class="switch">
+                        <input id="no-repeat-toggle" type="checkbox" checked>
+                        <span class="slider" aria-hidden="true"></span>
+                        <span class="switch__label">Sin repetición</span>
+                    </label>
+                    <label class="switch">
+                        <input id="streamer-toggle" type="checkbox">
+                        <span class="slider" aria-hidden="true"></span>
+                        <span class="switch__label">Modo streamer</span>
+                    </label>
+                    <label class="switch">
+                        <input id="theme-toggle" type="checkbox">
+                        <span class="slider" aria-hidden="true"></span>
+                        <span class="switch__label">Tema azul/púrpura</span>
+                    </label>
+                </div>
+            </section>
 
-          <section class="slot" aria-live="polite" aria-label="Slot animado de mapas">
-            <div class="slot__window">
-              <div class="slot__column" data-column="0"></div>
-              <div class="slot__column" data-column="1"></div>
-              <div class="slot__column" data-column="2"></div>
-            </div>
-          </section>
+            <section class="slot" aria-live="polite" aria-label="Slot animado de mapas">
+                <div class="slot__window">
+                    <div class="slot__column" data-column="0"></div>
+                    <div class="slot__column" data-column="1"></div>
+                    <div class="slot__column" data-column="2"></div>
+                </div>
+            </section>
 
-          <section class="result" aria-label="Mapa ganador">
-            <article class="result-card" data-state="idle">
-              <div class="result-card__bg" aria-hidden="true"></div>
-              <header class="result-card__header">
-                <img src="assets/crown.svg" alt="Crown icon" class="result-card__crown">
-                <span class="result-card__badge">Ganador</span>
-              </header>
-              <h2 class="result-card__title" id="winner-name">Listo para randomizar</h2>
-            </article>
-          </section>
+            <section class="result" aria-label="Mapa ganador">
+                <article class="result-card" data-state="idle">
+                    <header class="result-card__header">
+                        <img src="assets/crown.svg" alt="Icono de corona" class="result-card__crown">
+                        <span class="result-card__badge">Ganador</span>
+                    </header>
+                    <h2 class="result-card__title" id="winner-name">Listo para randomizar</h2>
+                </article>
+            </section>
 
-          <section class="history" aria-label="Historial de resultados">
-            <h3 class="history__title">Historial</h3>
-            <div class="history__chips" id="history-list" role="list">
-              <span class="history__placeholder">Aún no hay sorteos. Los cinco últimos aparecerán aquí.</span>
-            </div>
-          </section>
+            <section class="history" aria-label="Historial de resultados">
+                <h3 class="history__title">Historial</h3>
+                <div class="history__chips" id="history-list" role="list">
+                    <span class="history__placeholder">Aún no hay sorteos. Los cinco últimos aparecerán aquí.</span>
+                </div>
+            </section>
         </section>
-      </main>
+    </main>
+
+    <audio id="sfx-win" src="assets/win.mp3" preload="auto"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
